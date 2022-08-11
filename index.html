@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>CAJEROS YA
+    </title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- css main -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <style>
+        .container.testimonios {
+            width: 100%;
+            padding: 0px;
+        }
+
+        .container.testimonios h3 {
+            font-size: 16pt;
+        }
+        
+    </style>
+</head>
+
+<body style="background-color: #DFDFDF;">
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">CAJEROS YA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Log In</a>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesión</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div id="inicioSesion">
+
+                                            </div>
+
+                                       <!--  FORMULARIO LOGIN -->
+                                            <form action="" class="">
+                                                <div class="row">
+                                                    <label for="" class="ms-5 ps-3">
+                                                        Nombre Usuario o Correo
+                                                    </label>
+                                                    <span class="ms-auto my-1 py-2 col-1 border  rounded-start shadow border-2 border-dark">
+                                                        <i class="bi bi-people px-auto fw-bold"></i>
+                                                    </span>
+                                                    <input type="text" name="" id="usuario" class="me-auto my-1 py-2 col-8  border border-dark border-2 rounded-end shadow" placeholder="Usuario Correo Electrónico" required>
+                                                    
+                                                    <br>
+
+                                                    <label for="" class="ms-5 ps-3">Contraseña</label>
+                                                    <span class="ms-auto my-1 py-2 col-1 border  rounded-start shadow border-2 border-dark">
+                                                        <i class="bi bi-lock px-auto fw-bold"></i>
+                                                    </span>
+                                                    <input type="password" name="" id="contra" class="me-auto my-1 py-2 col-8  border border-dark border-2 rounded-end shadow" placeholder="Contraseña" required>
+                                                    <br>
+                                                    <div class="mx-auto  col-5 my-2">
+                                                        <button type="button" class="btn btn-success btn-lg" onclick="iniciarSesion()">Iniciar Sesión</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal1">Registrarse</a>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Registro</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="registrar">
+                                            
+                                        </div>
+                                 <!-- FORMULARIO REGISTRAR -->
+                                        <form action="registrar.php" method="POST" class="">
+                                            <div class="row ">
+                                                <label for="" class="ms-5 ps-3">Nombre Usuario</label>
+                                                <span class="ms-auto my-1 py-2 col-1 border  rounded-start shadow border-2 border-dark">
+                                                    <i class="bi bi-people px-auto fw-bold"></i>
+                                                </span>
+                                                <!-- LLEVA DATOS A BASE -->
+                                                <input type="text" name="usuario" id="usuarior" class="me-auto my-1 py-2 col-8  border border-dark border-2 rounded-end shadow" placeholder="Usuario" required>
+                                                <br>
+                                                <label for="" class="ms-5 ps-3">Contraseña</label>
+                                                <span class="ms-auto my-1 py-2 col-1 border  rounded-start shadow border-2 border-dark">
+                                                    <i class="bi bi-lock px-auto fw-bold"></i>
+                                                </span>
+                                                
+                                                <input type="password" name="contrar" id="contrar" class="me-auto my-1 py-2 col-8 border border-dark border-2 rounded-end shadow" placeholder="Contraseña" required>
+                                                <br>
+                                                <label for="" class="ms-5 ps-3">Confirme su Contraseña</label>
+                                                <span class="ms-auto my-1 py-2 col-1 border  rounded-start shadow border-2 border-dark">
+                                                    <i class="bi bi-lock px-auto fw-bold"></i>
+                                                </span>
+                                                <input type="password" name="contrarConfirm" id="contrarConfirm" class="me-auto my-1 py-2 col-8 border border-dark border-2 rounded-end shadow" placeholder="Contraseña" required>
+                                                <br>
+                                                <label for="" class="ms-5 ps-3">Correo</label>
+                                                <span class="ms-auto my-1 py-2 col-1 border  rounded-start shadow border-2 border-dark">
+                                                    <i class="bi bi-at px-auto fw-bold"></i>
+                                                </span>
+                                                <input type="email" name="emailr" id="emailr" class="me-auto my-1 py-2 col-8 border border-dark border-2 rounded-end shadow" placeholder="user@email.com" required>
+                                                <br>
+                                                <hr>
+                                                <br>
+                                                <label for="" class="ms-5 ps-3 mb-3">Opcional </label>
+                                                <br>
+                                                <label for="" class="ms-5 ps-3">Nombre </label>
+                                                <span class="ms-auto  py-2 my-2 col-1 bg-primary border  rounded-start shadow border-2 border-dark">
+                                                    <i class="bi bi-person px-auto fw-bold py-2 text-white"></i>
+                                                </span>
+                                                <input type="text" name="nombre" id="nombre" class="me-auto py-2 my-2 col-8 border border-dark border-2 rounded-end shadow" placeholder="nombre">
+                                                <br>
+                                                <label for="" class="ms-5 ps-3">Número telefónico </label>
+                                                <span class="ms-auto  py-2 my-2 col-1 border  rounded-start shadow border-2 border-dark">
+                                                    <i class="bi bi-telephone px-auto fw-bold py-2 "></i>
+                                                </span>
+                                                <input type="number" name="telefono" id="telefono" class="me-auto py-2 my-2 col-8 border border-dark border-2 rounded-end shadow" placeholder="+54 011 205060">
+                                                <br>
+
+                                                <div class="mx-auto col-5 my-2">
+                                                <button type="submit" class="btn btn-success btn-lg" onclick="registerUser()" name="registrarse">Registrarse</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Contáctanos</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Contacto</a></li>
+                            <li><a class="dropdown-item" href="#">Sobre Nosotros</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="#">Ubicación</a></li>
+                            <li><a href="./html/otrapage.html" class="dropdown-item">Otra Pagina</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page content-->
+    <!-- Page Content -->
+    <div class="container mt-3">
+        <div class="row" style="background-color:white">
+            <div class="col-lg-12 text-center">
+                <h1 class="mt-5" style="color: #cdae51;"><b>UBICACIÓN DE CAJEROS AUTOMÁTICOS CON DINERO EFECTIVO LAS 24 HS</b></h1>
+                <h2 style="font-size: 16pt;">Valoramos su tiempo como si fuera el nuestro</h2>
+                <img src="./images/cajeroimagen.jpg" alt="Portada" style="width: 100%;">
+                <p>
+                    <a style="color: #777777;padding: 30px; text-decoration: none;" href="">Visítenos</a>
+                </p>
+                <p class="parrafo">
+                    Cajeros Ya se esfuerza por combinar lo mejor
+                    de la tecnología con el mejor uso de su tiempo, con acceso<br> a la información desde sus móviles, mientras mantenemos una relación
+                    afectuosa con nuestros clientes.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container testimonios">
+        <h3 class="text-center bg-white mt-1 py-4">SERVICIOS</h3>
+        <div class="row" style="background-color: white;">
+            <div class="col-xs-12 col-sm-6 col-lg-3 p-3"
+                style="border:solid 5px #DFDFDF; background-color:white;">
+                <h6>
+                    <b>
+                         CAJEROS AUTOMÁTICOS PRÓXIMOS A LA UBICACIÓN DEL CLIENTE
+                    </b>
+                </h6>
+                <p>
+                    Desde su móvil Ud tiene acceso al mapa de la ubicación de los cajeros con dinero efectivo en un radio de 500 m respecto a su ubicación. 
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 p-3"
+                style="border:solid 5px #DFDFDF; background-color:white;">
+                <h6>
+                    <b>
+                        EXISTENCIA DE DINERO EFECTIVO EN LOS CAJEROS
+                    </b>
+                </h6>
+                <p>
+                    Este dato se mantiene actualizado, gracias a la colaboración de los usuarios, quienes brindan<br> los datos para quienes desean información actualizada <br>la puedan obtener al instante. 
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 p-3"
+                style="border:solid 5px #DFDFDF; background-color:white;">
+                <h6>
+                    <b>
+                        NÚMERO DE PERSONAS EN LOS CAJEROS CON DINERO EFECTIVO
+                    </b>
+                </h6>
+                <p>
+                    Como valoramos su tiempo disponible para hacer estas operaciones, la aplicación brinda datos de la cantidad<br> de personas que están en la espera para realizar las operaciones, especialamente en las horas pico.
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 p-3"
+                style="border:solid 5px #DFDFDF; background-color:white;">
+                <h6>
+                    <b>
+                        CONSULTA DE CAJEROS QUE NO FUNCIONAN
+                    </b>
+                </h6>
+                <p>
+                   Con la finalidad de evitar contratiempos,se encuentra disponible esta información que también es actualizada por los usuarios registrados.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+        </symbol>
+        <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+        </symbol>
+        <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </symbol>
+      </svg>
+      
+      <!-- <div class="alert alert-primary d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+        <div>
+          An example alert with an icon
+        </div>
+      </div>
+
+      <div class="alert alert-success d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+        <div>
+          An example success alert with an icon
+        </div>
+      </div>
+
+      <div class="alert alert-warning d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+        <div>
+          An example warning alert with an icon
+        </div>
+      </div>
+
+      <div class="alert alert-danger d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+        <div>
+          An example danger alert with an icon
+        </div>
+      </div> -->
+
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
